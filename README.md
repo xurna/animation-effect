@@ -1,6 +1,5 @@
 animation-effect 动画效果
 ========
->关于我，欢迎关注！<br/>
 >作者：Xurna Yang <br/>
 >修改日期：2016.3.13 <br/>
 
@@ -18,8 +17,8 @@ written with css3 and js <br/>
 
 项目目录<br/>
 -------
-  |----css  <br/>
-  |----js  <br/>
+      |----css  
+      |----js  <br/>
       |----jquery.js  <br/>
   |----slider nav.html  <br/>
   |----ripple.html  <br/>
