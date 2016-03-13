@@ -17,7 +17,8 @@ written with css3 and js <br/>
 
 项目目录<br/>
 -------
-      |----css  
+      |----iamges
+         |----photo
       |----js 
          |----jquery.js  
       |----slider nav.html  
