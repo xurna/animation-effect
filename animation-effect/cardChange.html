@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>卡片切换效果 | Xurna Yang</title>
+	<style type="text/css">
+		.wrapper{
+			width: 336px;
+			height: 336px;
+			position: relative;
+			margin: 10px auto;
+			-webkit-transition: box-shadow .5s cubic-bezier(.65, .05, .36, 1);
+		    transition: box-shadow .5s cubic-bezier(.65, .05, .36, 1);
+		}
+		.wrapper:hover{
+			box-shadow: 0 0 10px rgba(0,0,0,0.5);
+			-webkit-transition: box-shadow .25s cubic-bezier(.65, .05, .36, 1);
+		    transition: box-shadow .25s cubic-bezier(.65, .05, .36, 1);
+		}
+
+		.wrapper:hover .front{
+			opacity: 0;
+			filter: alpha(opacity=0);
+			 -webkit-transition: opacity .5s cubic-bezier(.65, .05, .36, 1);
+		    transition: opacity .5s cubic-bezier(.65, .05, .36, 1);
+		}
+		.wrapper:hover .front p.title{
+			-webkit-transform: translate3D(0, -50px, 0);
+			-ms-transform: translate3D(0, -50px, 0);
+			transform: translate3D(0, -50px, 0);
+			opacity: 0;
+			filter: alpha(opacity=0);
+		}
+		.wrapper:hover .front p.down{
+			-webkit-transform: translate3D(0, 50px, 0);
+			-ms-transform: translate3D(0, 50px, 0);
+			transform: translate3D(0, 50px, 0);
+			opacity: 0;
+			filter: alpha(opacity=0);
+		}
+		.front,.back,.wrapper{
+			border-radius:6px;
+			-webkit-border-radius:6px;
+		}
+		.front p.down{
+			position: absolute;
+			bottom: 0;
+			left: 20px;
+			font-size: 20px;
+		}
+		.front{
+			width: 336px;
+			height: 336px;
+			background: green;
+			position: relative;
+			left: 0;
+			top: 0;
+			opacity: 1;
+			-webkit-transition: opacity .25s cubic-bezier(.65, .05, .36, 1);
+		    transition: opacity .25s cubic-bezier(.65, .05, .36, 1);
+		}
+		.front p{
+			font-size: 30px;
+			color: #fff;
+			text-align: center;
+			line-height: 50px;
+			margin: 0;
+			font-weight: bold;
+			opacity: 1;
+			-webkit-transition: -webkit-transform .25s cubic-bezier(.65, .05, .36, 1),opacity .3s cubic-bezier(.65, .05, .36, 1);
+			transition: transform .25s cubic-bezier(.65, .05, .36, 1),opacity .3s cubic-bezier(.65, .05, .36, 1)
+		}
+		.back{
+			width: 336px;
+			height: 336px;
+			background: green;
+			position: absolute;
+		    top: 0;
+		    left: 0;
+		    opacity: 1;
+		    -webkit-transition: opacity .25s cubic-bezier(.65, .05, .36, 1);
+		    transition: opacity .25s cubic-bezier(.65, .05, .36, 1);
+
+		}
+		.back img{
+			border-radius:6px;
+			-webkit-border-radius:6px;
+		}
+
+	</style>
+</head>
+<!-- 
+	/**
+	* 卡片切换效果
+	* @author Xurna Yang(2016-3-13)
+	*/ 
+-->
+<body>
+	<div class="wrapper">
+		
+		<div class="back"><img src="images/1.png" alt=""/></div>
+		<div class="front">
+			<p class="title">前面的文字</p>
+			<p class="down">点赞</p>
+		</div>
+	</div>
+
+</body>
+</html>

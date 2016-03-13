@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>滑动条滑动效果 | Xurna Yang</title>
+	<style type="text/css">
+	body, html { font-size: 100%; 	padding: 0; margin: 0;}
+	
+		ul{
+			width: 480px;
+			padding:0;
+			list-style: none;
+			position: relative;
+			font-size: 0;  /*去除inline-block的间隙*/
+			 /*display: table;*/ /*去除inline-block的间隙*/
+			 margin: 40px auto;
+		}
+		li{
+			width: 160px;
+			height: 60px;
+			display: inline-block;
+			text-align: center;
+			line-height: 60px;
+			background: green;
+			margin: 0;
+			color: #fff;
+			font-size: 20px;
+			overflow: hidden;
+			cursor: pointer;
+			position: relative;
+			 
+		}
+		.slider{
+			display: block;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			height: 4px;
+			background: red;
+			-webkit-transition:all 0.5s;
+			transition:all 0.5s;
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<ul class="wrapper">
+		<li>标题1</li>
+		<li>标题2</li>
+		<li>标题3</li>
+		<li class="slider"></li>
+	</ul>	
+</body>
+</html>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script>
+	/**
+	* 滑动条滑动效果
+	* @author Xurna Yang(2016-3-13)
+	*/
+    var addsliderEffect = {
+
+        init: function () {
+                _addsliderEffect = this;
+                _addsliderEffect.config = {
+                    $slider: $(".wrapper li"),
+                };
+                _addsliderEffect.setup();
+            },
+
+        setup: function () {
+            _addsliderEffect.config.$slider.on('click', _addsliderEffect.sliderEffect);
+        },
+
+       sliderEffect : function (event) {
+       	
+            if ($(this).hasClass("slider")) {
+            	return;
+            };
+            var tab = $(this).index();
+            var far = $(this).width()*tab;
+            $(".slider").css({
+            	left:far+'px'
+            });
+        }
+    };
+    addsliderEffect.init();
+
+</script>
