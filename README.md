@@ -18,11 +18,11 @@ written with css3 and js <br/>
 项目目录<br/>
 -------
       |----css  
-      |----js  <br/>
-      |----jquery.js  <br/>
-  |----slider nav.html  <br/>
-  |----ripple.html  <br/>
-  |----cardChange.html  <br/>
+      |----js 
+            |----jquery.js  
+      |----slider nav.html  
+      |----ripple.html  
+      |----cardChange.html  
 
 
 
