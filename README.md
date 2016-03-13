@@ -17,6 +17,8 @@ written with css3 and js <br/>
 
 项目目录<br/>
 -------
+      |----css
+         |----css
       |----iamges
          |----photo
       |----js 
